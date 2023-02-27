@@ -1,0 +1,128 @@
+.navbar {
+    padding: 1.3rem;
+    height: 4rem;
+
+    @include mQ(768px) {
+        display: flex;
+        align-items: center;
+    }
+}
+.navbar-brand {
+    display: flex;
+    justify-content: space-between;
+    
+    @include mQ(768px) {
+        width: 50%;
+    }
+
+    &__logo {
+        width: clamp(110px, 18vw, 180px);
+    }
+}
+.navbar-brand__link {
+    text-decoration: none;
+}
+.btn-hamburguer {
+    padding: 0;
+    background-color: $light-blue;
+    border: 0;
+    outline: 1px solid $light-blue;
+
+    @include mQ(768px) {
+        display: none;
+    }
+}
+.triangle {
+    position: absolute;
+    top: 79px;
+    right: 21px;
+    width: 0;
+    height: 0;
+    border-bottom: 1.4rem solid $white;
+    border-left: 1.4rem solid transparent;
+    opacity: 0;
+
+    @include mQ(768px) {
+        display: none;
+    }
+}
+.navMenu {
+    position: relative;
+    margin-top: 3.5rem;
+    padding: 1.5rem 0;    
+    background-color: $white;
+    opacity: 0;
+    pointer-events: none;
+
+    @include mQ(768px) {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+        width: 50%;
+        background-color: transparent;
+        opacity: 1;
+        pointer-events: visible;
+    }
+    
+    &__item {
+        padding: 1rem;
+        text-align: center;
+        list-style: none; 
+    
+        &:last-child {
+            margin: 1rem 0;
+
+            @include mQ(768px) {
+                margin: 0;
+            }
+        }
+    }
+    &__link {
+        @include font-links($dark-grayish-blue);
+
+        @include mQ(768px) {
+            color: $white;
+
+            &:hover {
+                color: $light-moderate-blue;
+                cursor: pointer;
+                transition: 0.1s;
+            } 
+        }
+
+        &--contact {
+            margin: 2rem 0;
+            padding: .9rem 1.4rem;
+            font-family: $serif-font;
+            font-size: .9rem;
+            text-transform: uppercase;
+            color: $very-dark-desaturated-blue;
+            background-color: $yellow;
+            border-radius: 50px;
+
+            @include mQ(768px) {
+                margin-right: 0;
+                padding: .5rem 1rem;
+                font-size: .8rem;
+                color: $very-dark-desaturated-blue;
+                background-color: $white;    
+
+                &:hover {
+                    cursor: pointer;
+                    color: $white;
+                    background-color: $light-moderate-blue;
+                    transition: 0.1s;
+                }
+            }         
+        }
+    }
+}
+
+.is-active {
+    opacity: 1;
+    pointer-events: visible;
+    fill: $light-moderate-blue;
+}
+.is-clicked {
+    fill: #a0a9ad;
+}

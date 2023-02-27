@@ -1,0 +1,9 @@
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+    //16px -> 24px
+    font-size: clamp(1rem, calc(0.8239rem + 0.7512vw), 1.5rem);
+}
+body {
+    min-height: 100vh;
+}

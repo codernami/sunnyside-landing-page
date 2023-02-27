@@ -1,0 +1,20 @@
+// Config style guide
+@import'config/_fonts.scss';
+@import'config/_colors.scss';
+@import'config/_mixins.scss';
+
+// Base styles
+@import'base/_normalize.scss';
+@import'base/_base.scss';
+
+// Components
+@import'components/_header.scss';
+@import'components/_navbar.scss';
+@import'components/_hero.scss';
+@import'components/_about-card.scss';
+@import'components/_service-card.scss';
+@import'components/_client-card.scss';
+@import'components/_projects-gallery.scss';
+@import'components/_footer.scss';
+@import'components/_footer-menu.scss';
+@import'components/_social-menu.scss';

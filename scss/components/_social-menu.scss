@@ -1,0 +1,18 @@
+.social-menu {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+
+    &__link {
+        color: $dark-moderate-cyan;
+
+        &:hover {
+            color: $white;
+        }
+    }
+    &__icon {
+        width: clamp(20px, 5vw, 40px);
+        margin: 1rem;
+
+    }
+}

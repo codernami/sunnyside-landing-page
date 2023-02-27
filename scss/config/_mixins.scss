@@ -1,0 +1,72 @@
+/* Titles and texts */
+
+@mixin title($color-title: $very-dark-desaturated-blue, $transform-title: none){
+    font-family: $serif-font;
+    font-weight: 900;
+    text-align: center;
+    color: $color-title;
+    text-transform: $transform-title;
+}
+
+@mixin text($font, $weight, $font-color, $align) {
+    font-family: $font;
+    font-weight: $weight;
+    color: $font-color;
+    text-align: $align;
+}
+@mixin text-left {
+    text-align: left;
+}
+
+
+@mixin font-links($font-color) {
+    font-family: $sans-font;   
+    color: $font-color;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+@mixin underlined-link($color-underline: $yellow) {
+    display: block;
+    margin-top: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    font-family: $serif-font;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $very-dark-desaturated-blue;
+    text-align: center;
+    border-bottom: 12px solid $color-underline;
+    //border-radius: 10px;
+
+}
+
+/* Background images */
+
+@mixin bg-image($bg-image, $bg-position) {
+    background-color: $white;
+    background-image: $bg-image;
+    background-size: cover;
+    background-position: $bg-position;
+}
+
+
+/* Alignments */
+
+@mixin flex-column-center() {
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin align-center() {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin mQ($arg) {
+    @media screen and (min-width: $arg) {
+        @content;
+    }    
+}
